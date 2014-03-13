@@ -23,4 +23,7 @@ categories: javascript
 {% endhighlight %}
 
 ###原因
-原因是http头信息设置为content-type:"application/json; charset=utf-8",而http响应体是空,并不是有效的JSON格式
+原因是http头信息设置为content-type:"application/json; charset=utf-8",而http响应体是空,并不是有效的JSON格式，ajax判断后认为是错误的而执行了fail回调。
+
+###修改方法：
+将success回调函数修改为complete回调
