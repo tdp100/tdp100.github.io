@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "cas cookie secure"
+date:   2014-03-06 14:30:40
+categories: cas
+---
+
+#CAS 中的两个Cookie如何设置成secure
+
+###安全需要
+------------------------
+SSO使用开源软件CAS 3.4.5版本（http://downloads.jasig.org/cas/）。使用Appscan工具扫描SSO时，发现使用HTTPS传输时：
+CASTGC=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT;
+CASPRIVACY="": Expires=Thu, 01-Jan-1970 00:00:10 GMT;
+并没有使用secure
+
+###修改办法
+------------------------
+
