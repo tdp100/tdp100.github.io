@@ -15,7 +15,7 @@ categories: javascript
 行: 11<br/>
 字符: 23822<br/>
 代码: 0<br/>
-`URI: http://localhost:63342/tenant/lib/tiny/tiny-lib/raphael.js`<br/>
+`URI: http://localhost:63342/raphael.js`<br/>
 
 ##原因分析
 ---
