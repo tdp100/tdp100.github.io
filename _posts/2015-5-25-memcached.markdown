@@ -2,9 +2,9 @@ memcached
 -------------------------
 
 ## memcached help
-```sh
+{% highlight bash %}
 ./memcached -help
-```
+{% endhighlight %}
 
 ## memcaced memory allocation
 
@@ -17,34 +17,33 @@ memcached按slab allocation方式分配管理内存
 
 
 **memcached 中pages的大小设置如下**：
-```sh
+{% highlight bash %}
 ./memcached -I 1m   
 ## -I            Override the size of each slab page. Adjusts max item size
 ##               (default: 1mb, min: 1k, max: 128m)
-
-```
+{% endhighlight %}
 
 **memcached　查看分配的chunks方式**:
-```sh
+{% highlight bash %}
 ./memcached -u memcached -vv  ##the user is memcached
-```
+{% endhighlight %}
 
 **memcached chunk增长因子设置**:
-```sh
+{% highlight bash %}
 ./memcached -f 1.25  ## default is 1.25
 ## -f <factor>   chunk size growth factor (default: 1.25)
-```
+{% endhighlight %}
 
 **memcached 分配内存的大小设置**:
-```sh
+{% highlight bash %}
 ./memcached -m 64
 ## -m <num>      max memory to use for items in megabytes (default: 64 MB)
-```
+{% endhighlight %}
 
 问题:如何让一个slab class有多个pages?
 
 **统计slab和item等数据**:
-```sh
+{% highlight bash %}
 telnet memcached_ip memcached_port
 stats
 
@@ -54,7 +53,7 @@ stats slabs
 stats items
 
 stats sizes
-```
+{% endhighlight %}
 
 ## memcached　分布式
 Memcached虽然称为“分布式“缓存服务器，但服务器端并没有“分布式”的功能。Memcached的分布式完全是有客户端实现的．
