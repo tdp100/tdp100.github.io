@@ -67,6 +67,6 @@ Memcached虽然称为“分布式“缓存服务器，但服务器端并没有�
 No, there is no security required to access or update the information within a memcached instance, which means that anybody with access to the machine has the ability to read, view and potentially update the information. If you want to keep the data secure, you can encrypt and decrypt the information before storing it. If you want to restrict the users capable of connecting to the server, your only choice is to either disable network access, or use IPTables or similar to restrict access to the memcached ports to a select set of hosts. 
 
 
-reference:
+## reference:
 + http://docs.oracle.com/cd/E17952_01/refman-5.6-en/ha-memcached-using-logs.html
 + http://docs.oracle.com/cd/E19078-01/mysql/mysql-refman-5.0/ha-overview.html
