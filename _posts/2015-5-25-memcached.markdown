@@ -6,7 +6,7 @@ memcached
 ./memcached -help
 {% endhighlight %}
 
-### memcaced memory allocation
+### memcached memory allocation
 
 memcached按slab allocation方式分配管理内存
 每一个page是1MB(by default)，然后把一个page划分成多个相同大小的chunk, 所有相同的chunks 组成一个集合slab class．　
