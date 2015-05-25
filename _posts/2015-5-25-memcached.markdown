@@ -1,12 +1,12 @@
 memcached 
 -------------------------
 
-## memcached help
+### memcached help
 {% highlight shell %}
 ./memcached -help
 {% endhighlight %}
 
-## memcaced memory allocation
+### memcaced memory allocation
 
 memcached按slab allocation方式分配管理内存
 每一个page是1MB(by default)，然后把一个page划分成多个相同大小的chunk, 所有相同的chunks 组成一个集合slab class．　
@@ -55,17 +55,17 @@ stats items
 stats sizes
 {% endhighlight %}
 
-## memcached　分布式
+### memcached　分布式
 Memcached虽然称为“分布式“缓存服务器，但服务器端并没有“分布式”的功能。Memcached的分布式完全是有客户端实现的．
 ![image](images/memcached-distribute.jpeg)
 采用得最多是Consistent Hashing方式，根据key的哈希值来分配相应的memcached node. see:http://blog.sina.com.cn/s/blog_493a845501013ei0.html
 
-## memcached存储的数据安全吗?
+### memcached存储的数据安全吗?
 15.5.5.2: Is the data inside of memcached secure?
 
 No, there is no security required to access or update the information within a memcached instance, which means that anybody with access to the machine has the ability to read, view and potentially update the information. If you want to keep the data secure, you can encrypt and decrypt the information before storing it. If you want to restrict the users capable of connecting to the server, your only choice is to either disable network access, or use IPTables or similar to restrict access to the memcached ports to a select set of hosts. 
 
 
-## reference:
+### reference:
 + http://docs.oracle.com/cd/E17952_01/refman-5.6-en/ha-memcached-using-logs.html
 + http://docs.oracle.com/cd/E19078-01/mysql/mysql-refman-5.0/ha-overview.html
