@@ -2,7 +2,7 @@ memcached
 -------------------------
 
 ## memcached help
-{% highlight bash %}
+{% highlight shell %}
 ./memcached -help
 {% endhighlight %}
 
@@ -17,25 +17,25 @@ memcached按slab allocation方式分配管理内存
 
 
 **memcached 中pages的大小设置如下**：
-{% highlight bash %}
+{% highlight shell %}
 ./memcached -I 1m   
 ## -I            Override the size of each slab page. Adjusts max item size
 ##               (default: 1mb, min: 1k, max: 128m)
 {% endhighlight %}
 
 **memcached　查看分配的chunks方式**:
-{% highlight bash %}
+{% highlight shell %}
 ./memcached -u memcached -vv  ##the user is memcached
 {% endhighlight %}
 
 **memcached chunk增长因子设置**:
-{% highlight bash %}
+{% highlight shell %}
 ./memcached -f 1.25  ## default is 1.25
 ## -f <factor>   chunk size growth factor (default: 1.25)
 {% endhighlight %}
 
 **memcached 分配内存的大小设置**:
-{% highlight bash %}
+{% highlight shell %}
 ./memcached -m 64
 ## -m <num>      max memory to use for items in megabytes (default: 64 MB)
 {% endhighlight %}
@@ -43,7 +43,7 @@ memcached按slab allocation方式分配管理内存
 问题:如何让一个slab class有多个pages?
 
 **统计slab和item等数据**:
-{% highlight bash %}
+{% highlight shell %}
 telnet memcached_ip memcached_port
 stats
 
